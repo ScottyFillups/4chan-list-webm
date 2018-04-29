@@ -4,9 +4,9 @@ Given a board and thread number, returns a `Promise` with an array of objects co
 
 Here's a little [demonstration](http://www.4webm.org/) of `4chan-list-webm`, http://4webm.org, in action (plz star).
 
-### UPDATE 3.0.0 BREAKING CHANGE
+### UPDATE 4.0.0 BREAKING CHANGE
 
-`4chan-list-webm` now returns a `Promise`. See "Usage" for an example.
+The payload returned by `4chan-list-webm` has changed, and now contains the thread subject, if applicable (see example below).
 
 ## Installation
 
@@ -36,12 +36,20 @@ listWebms('wsg', 2045456).then(function (webms) {
 
 The data looks like this:
 ```json
-[{ "filename": "1478018951860",
+{
+  "subject": "SOME THREAD SUBJECT",
+  "webms": [
+  {
+    filename": "1478018951860",
     "url": "http://i.4cdn.org/wsg/1514757619690.webm",
-    "thumbnail": "http://i.4cdn.org/wsg/1514757619690s.jpg" },
- { "filename": "1505294337138",
+    "thumbnail": "http://i.4cdn.org/wsg/1514757619690s.jpg"
+  },
+  {
+    "filename": "1505294337138",
     "url": "http://i.4cdn.org/wsg/1514834417503.webm",
-    "thumbnail": "http://i.4cdn.org/wsg/1514834417503s.jpg" }]
+    "thumbnail": "http://i.4cdn.org/wsg/1514834417503s.jpg"
+  }]
+}
 ```
 
 
