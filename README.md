@@ -30,14 +30,16 @@ listWebms('wsg', 2045456)
   .catch(err => console.error('404!', err))
 
 // async/await
-;(async () => {
+async function run () {
   try {
     const data = await listWebms('http://boards.4chan.org/wsg/thread/2045456')
     console.log(data)
   } catch (err) {
     console.error('Whoa! 404! :c', err)
   }
-})()
+}
+
+run()
 ```
 
 ## API
