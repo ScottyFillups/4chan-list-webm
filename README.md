@@ -60,7 +60,7 @@ The URL of the thread. The thumbnail and webm links will use `https` if an `http
 
 Type: `String`
 
-The short-name of the board, eg. 'wsg', 'b', etc.
+The short-name of the board, eg. `'wsg'`, `'b'`, etc.
 
 #### threadNo
 
